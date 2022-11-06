@@ -1,0 +1,114 @@
+This is just a rough path for recon, just to get started, there are better methodologies than this but keeping in touch with roots is also good...
+Talking about Recon, it starts with the website itself. There may be a few vulnerabilities on the surface of the website.
+
+* Let's say we are taking "www.url.com" as our target.
+
+> Our first approach towards the target is to visit its official website and its publically available sub-domains.
+
+> Finding the employees' details, location details, addresses, phone numbers etc.
+
+> Looking for following pages in the website if available:
+              1. sitemap.html (user index)
+              2. sitemap.xml(Google index)
+              3. robots.txt(disallow or allow content for search engines)
+              4. readme.html/txt
+              5. liscence.txt
+              
+> Next step is to generate a sitemap online using:
+              1. sitemapgenerator xml-sitemaps.com
+              2. urlextractor
+              3. SEO-Spider
+              
+> Mirroring the website: 
+              1. In Linux
+                  # wget -m "www.url.com"
+              2. In windows, by using Httrack 
+
+> Wayback Machine
+		Checking for previous versions of the website, we can find some vulnerabilities that may persist even now.
+    
+    1. Visit- https://archive.org
+    2. Github toolfor this - (https://github.com/tomnomnom/waybackurls) 
+          # cat domains.txt | waybackurls > urls 
+       Install Golang in Linux- 
+                              # apt install golang
+                              # go install github.com/tomnomnom/waybackurls@latest
+
+    3. [tool] whatweb - for the terminal based website analyser like the wappanalyzer and the builtwith
+		 
+    4. [tool] security trails- this gives the real ip of the website that can be scanned because , the cloudfare can defend the website very great , we need to see the real ip behind this proxy ip , can also do with various things like ssrf and all
+		
+  	5. [tool] find a tool for site ranking
+
+> Website analysis - back and front-end both :
+        we need to check what all technologies are used to make the websites so for that we'll use these tools:
+            [tool] builtwith - this also has an extension for the browser
+            [tool] wappallyzer - it also is in the form of bith tool and extension
+
+> reverse whois and whois:
+    whois:
+        we need to check whois records for the websites:
+            [site] godaddy can help you
+            [site] who.is is also a good choice
+            [site] https://whois.domaintools.com/
+    
+    reverse whois:
+        [site] viewdns.info - this site has more than whois lookup tools in it's arsenal , use it and you shall find ip history , dns records checker , and other dns analysis tools
+
+        [site] reversewhois.io
+
+        [site] https://toolbox.googleapps.com/apps/main/
+        google also provides some tools for public , try them too
+
+        [site] iptolocation.com
+	
+	      [site] centralops.com
+
+        [site] keycdn.com = iplocation finder - more accurate
+        but why do we do this? : to get the service provider and to look at the other details like when was made and all , so that we get estimate what might we have to face while pentesting
+
+when you get the real ip from the  whois we take that ip
+	 to security trails 
+	 
+	 when you need to know that the ip is real or not , then make an entry of the ip to hostfile and then we can seee whether the ip is taking is to the domain or not
+	 
+	 take the ip from the viewdns or anyother good website and 
+	 give the commands: 
+
+	 dig dummyurl.com ns
+	 nslookup -type=ns dummyurl.com
+	 
+	 get master nameserver record from SOA records
+	 dig <ip> soa - the first server is the nameserver
+
+	  reverse ip domain lookup:
+		  [#]reverse ip domain check
+
+	  now we check the mail server:
+	  	dig <ip> mx
+	  	go to viewdns: and go to mxlookup
+		
+    we can also check the following vulnerability if in scope of target:
+      link hijacking vulnerability:
+        via link extractor
+    
+    for more about this vulnerability check: [site] https://shahjerry33.medium.com/broken-link-hijacking-mr-user-agent-cd124297f6e6
+	
+	
+ NOW WE GOT THE IPs , WE'LL SCAN THE PORT OF THE IP:
+ 	we do the PASSIVE scan first via : open port finder
+ 	or via : viewdns portscanner
+ 	also if you need some help for much better recon these are your "go-to" guys:
+ 	some great writeup guys for recons: GodFatherOrwa
+ 	 jason haddix
+     check their twitter and medium blogs
+     
+     twitter:
+        godfather orwa: https://twitter.com/GodfatherOrwa
+        jason haddix: https://twitter.com/jhaddix
+     
+     medium:
+        jason haddix: https://medium.com/@jhaddix
+        godfather orwa: https://orwaatyat.medium.com/
+
+This completes the initial step of recon , now we got the basic idea who we are dealing here with...
