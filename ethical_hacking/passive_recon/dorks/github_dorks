@@ -1,0 +1,100 @@
+> Github dorks:
+    remember to search most efficiently here , these are the vaults of code that a company has , so look for material that can lead to :
+        info disclosure
+        bugs found in code
+        critical section of code that wasn't to be revealed
+
+
+        [#] start either the name of the firm itself , then go step by step adding the keywords as you like :
+			"tesla.com" -> "tesla.com" <keywords>
+			keywords like: password , passwd , key , api , login, ftp ,token , {ss is there in pictures (sublime)}
+			developers tend to be adding the loose ends and we get the privelage to exploit them
+			
+		[#] <domain> filename:<filename> like dockercfg_auth (you need to know which files have the passwords ) , id_rsa (client side), id_dsa , aws_access_key_id, ssh_key, s3cfg , manifest.xml ,vim_Settings.xml,sftp-config.json, secrets.yml, .env file
+
+		target the developers , they have the loose ends most of the time , they do all the back-end stuff
+		
+		[#] file extensions -> extension:<fileextension>
+		 
+		[#] check the linkedin for the employees and then find them on github , search their repos. Filter the result in the linkedin for devs and check their repos for leaked info , manually 
+		 they may have the alias and thus check for their contribution for open source and can get thier alias
+		
+		[###] https://github.com/techgaun/github-dorks.git   -> github dorks
+		[###] godfather orwa's : https://orwaatyat.medium.com/your-full-map-to-github-recon-and-leaks-exposure-860c37ca2c82 [**** this guy also gave the tools to automate ****]
+		
+		REMEMBER MANUAL IS THE BEST , DON'T ALWAYS RELY ON AUTOMATION 
+		
+	
+
+
+                    github dorks/filters:-
+                            https://github.com/random-robbie/keywords/blob/d19798d5327540b6c682733b806416433ea27c76/keywords.txt
+                                            
+                    "company domain"
+                    "company domain" password
+                    "company domain" key
+                    "company domain" secret
+                    "company domain" credentials
+                    "company domain" pass
+                    "company domain" pwd
+                    "company domain" api
+                    "company domain" tokan
+                    "company domain" login
+                    "company domain" ftp
+                    "company domain" config
+                    "company domain" conf
+                    "company domain" ssh
+                    "company domain" security_credentials
+                    "company domain" connectionstring
+                    "company domain" jdbc
+                    "company domain" ssh2_auth_password
+                    "company domain" send_keys or send,keys
+                    
+                    
+                    filename:
+                    filename:npmrc_auth
+                    filename:id_rsa
+                    filename:id_dsa
+                    filename:credentials aws_access_key_id
+                    filename:s3cfg
+                    filename:manifest.xml
+                    filename:travis.yml
+                    filename:vim_setting.xml
+                    filename:database
+                    filename:prod.exs NOT prod.secret.exs
+                    filename:prod.secret.exs
+                    filename:.npmrc_auth
+                    filename:.dockercfg_auth
+                    filename:WebServers.xml
+                    filename:.bash_history <domain name>
+                    filename:sftp.config.json
+                    filename:sftp.json path:.vscode
+                    filename:secrets.yml password
+                    filename:.esmtprc password
+                    filename:passwd path:etc
+                    filename:dbeaver-data-sources.xml
+                    filename:config.php
+                    filename:configuration.php JConfig password
+                    filename:.sh_history
+                    filename:shadow path:etc
+                    filename:proftpdpasswd
+                    filename:.pgpass
+                    filename:idea14.key
+                    filename:hub oauth_tokan
+                    filename:.bash-profile aws
+                    filename:.env MAIL_HOST=smtp.gmail.com
+                    filename:wp-config.php
+                    
+                    
+                    extension:
+                    extension:sql mysql dump
+                    extension:json api.forecast.io
+                    path:sites databases passwords
+                    shodan_api_key language:python
+                    JEKYLL_GITHUB_TOKEN
+                    HEROKU_API_KEY language:json
+                    HEROKU_API_KEY language:shell
+                    SF_USERNAME salesforce
+
+
+	in red teaming we go to the team details but not in pentest , or in bug bounty
