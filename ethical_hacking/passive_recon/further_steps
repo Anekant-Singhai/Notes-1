@@ -1,0 +1,34 @@
+> OSINT framework:	{osintframework.com}
+		"there's a website called: have i been pwned"	that contains the emails that are in the databases
+		which are public or compromised
+		there's also one more like this: dehashed.com
+		ghostproject.fr, intelx.io
+		even sir has a video for this: https://www.youtube.com/watch?v=_L3Mu-S9rVM
+		
+		when you want to verify that the email is there or not:
+			verify-email.org, emailrep.io
+		for us client: pipl website , insta and facebook are still the top
+		for email related info : mxtoolbox.com
+		there are the : DMRC records the above tool uses the dmrc records
+		namechk.com : where the account exists on different platforms
+		namecheckr.com: name exists on platforms like social media or not
+		there's a script also called: whatsmyname on github doing same thing on cmdline
+		
+		imagesearch in images , search in the osint framework -> google images
+									tineye images 
+									worldlii.com - for crime records
+									
+> how to find the public ip:
+			while getting hands-on the ip , always first see the service provider and check whether the isp is providing for that particular region or not
+			
+			resolve ip via dig <name> 
+			the go to iptolocation.net and put the ip
+				it can be self hosted or some other region is shown
+				when we can't get the public ip , we try to give him our server's link and our server will have the log and it's public ip: grabify.link	, use this to create a link and paste the real url that you wanna make the guy visit , this way we get the public ip , we not trying to phish 
+				
+				if you are a linux user give the command: "curl ifconfig.me" for getting public ip
+				
+			or if you have the server and you want to store the ip seperately you can there's php script that we can give to index.html , converting it to index.php
+			
+>    callerid sniffing:
+		crazycall.net
