@@ -1,0 +1,29 @@
+> Shodan
+these are all dork examples: change as you need:
+		[#]net:192.31.242.0/24 - gives the devices available in network
+		[#]net:192.31.242.0/24 port:80 
+		[#]net:192.31.242.0/24 port:80 product:"Microsoft httpd service"
+		[#]net:192.31.242.0/24 port:80 os:"windows xp"
+		
+		[#]org:"organization name"
+		[#]country:"US"
+		[#]geo:"<lat> <long>"	
+		[#]title:"intitle like google"
+		
+		shodan also has the power to access the ssl certs: just take the official name of cert from the site 
+		info and then give the dork-> ssl:"<cert>" and then we get the cert info as well as the ip's it runs
+		ssl.cert.subject.cn:"<common cert name>"
+		
+		check the favicons also sometimes they alter everything and favicons remain same so this reveals something too
+		
+		we can also use the api that is the fast solution but restricts the search to limited 
+		[tool] shodan api tools, shodan terminal:
+			apt install python3-shodan, then we'ed have to configure it wrt to api
+			
+				[#]shodan init <apikey>
+				[#] shodan search
+					while searching there is no colon applied in the terminal , whereas give the spave instead of it
+					-h for help
+					
+					also google: how to download data with shodan if any error persists
+				[#] shodan download <query> -> download the query results
