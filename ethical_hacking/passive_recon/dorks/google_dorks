@@ -1,0 +1,100 @@
+how do search engines work?
+    the basic idea of searching any webpage is applied to the google also 
+    we can have a better manipulation on the google searches if we target some specific keywords that the google seaches in the webpage and gives us the more relevant , precise and concise result.
+    google "spiders" the web pages with the help of the tool called spider that google built for seaching
+
+    So manipulation  of search results with the help of keywords is called Dorking
+    Dorking applies anywhere , where the search is involved 
+
+    so if you want to know how this spider worked in earlier times there's a tool that mimics it called "SEO-Spider" ...go tinker
+
+    to install it refer this website :
+       [site] https://www.screamingfrog.co.uk/seo-spider/user-guide/general/
+
+
+> Google dorks:
+
+    starting with the keywords that can help us in google searching:
+
+        -> when you want range: give the dots between the values
+		 	like you want price range
+		 	$1000...$2000 <keyword>
+		 	 
+		-> wildcard "*"  , when we want the all records related to the specific query like: how to make * with tomatoes
+		-> focus on specific keyword : use single or double quotations
+		
+		-> OR keyword
+		-> + operator for keywords 
+		
+		
+	advanced operators:
+	rules:	
+		no space btw the operator and search term
+	
+	operators:
+		intitle:
+		allintitle: 
+		inurl: url must contain these keywords
+		allinurl:
+		intext: url ,title , decription , kahi bhi mile
+		site: 
+		site: *.gov.in inurl:wp-admin
+		site:apple.com inurl:admin-login -apps
+		filetype: xls, pdf , 	
+		site:gov.in filetype:xls student account
+		inanchor: contains the link 
+		related: <keyword>
+		cache:
+		input:
+		
+		index of .dcim - give me the index of dcim folder
+		filetype:pdf username password @gmail.com
+		webarch/mainframe.cgi
+		
+		site:*.tesla.com -www -shop -meet -ehs 
+		site:dummyurl inurl:admin
+		site:gov.in phpmyadmin
+		intitle:whatsapp
+		inurl:paypal	intitle:"index of" backup | github |  php
+		
+		we can also get the google dorks premade from "google hacking database" from exploit db
+		like -> 
+		dork the number of servers working on vulnerable services
+		
+        [tool] - for google dorking "theharvester" not much but workable
+		[tool] - metagofil
+		metagoofil -d dummyurl.org -1 20 -t pdf -n 20  -o doc
+        
+        PS: they are linux tools
+
+        Queries operators:
+            Basic
+            + Force include
+            - exclude 
+            ~ similar
+            . Range between two numeric values 
+            * Missing keyword (wildcard)
+            “ ” focus 
+            OR compare
+            Advance 
+            Rules:
+
+            intitle:       search in title  (always use “ ” to put more than word)
+            allintitle:     search in title
+            inurl:     search in url
+            allinurl:     similar to the above 
+            intext:    anywhere (title/url/description)
+            site:www.tesla.com “admin”    give results for the keyword in the site 
+            site:www.tesla.com inurl:login
+            site:*.gov.in (wildcards)
+            filetype:
+            site:gov.in filetype:xls student account
+            inanchor: 
+            cache:www.url.com
+            related:
+            info:
+            Google dork for server backup!!
+            cctv live google dork
+            exploit db (google hacking database)
+            wordpress/iis/etc
+            recon using google dorks!!!
